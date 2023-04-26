@@ -1,4 +1,4 @@
-# Animated-outline - Draw animated outlines for your images.
+# Animated Outline - Draw animated outlines for your images.
 
 - Convert your image into an outline version of it.
 - Draw an animated outline from it.
@@ -20,7 +20,11 @@ start();
 ## API Reference
 
 ```js
-const start = animatedOutline(canvas: HTMLCanvasElement, url: string, options: {
+// Returns a start function which can be called to start the animation
+const start: (() => void) | null = animatedOutline(
+  canvas: HTMLCanvasElement,
+  url: string,
+  options: {
 			delay?: number;
 			direction?: 'ltr' | 'rtl';
 			style?: 'solid' | 'dashed';
